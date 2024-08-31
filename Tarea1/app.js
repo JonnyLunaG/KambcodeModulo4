@@ -18,5 +18,5 @@ const mostrarInfo = async () => {
     genero.innerHTML = `<b>Genero:</b> ${persona.gender}`;
     nombre.innerHTML = `<b>Nombre:</b> ${persona.name.first} ${persona.name.last}`;
 }
-
+mostrarInfo();
 boton.addEventListener('click', mostrarInfo);
