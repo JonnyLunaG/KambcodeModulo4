@@ -1,0 +1,12 @@
+.text-container.alive {
+    background-color: green;
+}
+  
+.text-container.dead {
+background-color: red;
+}
+  
+.text-container.unknown {
+background-color: blue;
+}
+  
