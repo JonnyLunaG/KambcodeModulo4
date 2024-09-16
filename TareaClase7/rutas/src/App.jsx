@@ -1,25 +1,30 @@
+import React from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-import HomePage from './pages/home/HomePage';
 import CharacterPage from './pages/character/CharacterPage';
 import EpisodesPage from './pages/episode/EpisodesPage';
 import NotFoundPage from './pages/notFound/NotFoundPage';
+import NavBar from './components/navBar/NavBar';
+import HomePage from './pages/home/HomePage';
+import Header from './components/Header/Header';
 import './App.css';
 
 function App() {
-
   return (
     <Router>
-      <div>
-        <Routes>
-          <Route path="/" exact element={<HomePage/>} />
-          <Route path="/characters" element={<CharacterPage/>} />
-          {/* La ruta de episodios es opcional, incluyela si la creaste en el paso 2*/}
-          <Route path="/episodes" element={<EpisodesPage/>} />
-          <Route element={<NotFoundPage/>} />
-        </Routes>
+      <div className='app'>
+        <Header/>
+        <NavBar />
+        <main className='content'>
+          <Routes>
+            <Route path="/" element={<HomePage />} />
+            <Route path="/characters" element={<CharacterPage />} />
+            <Route path="/episodes" element={<EpisodesPage />} />
+            <Route path="/*" element={<NotFoundPage />} />
+          </Routes>
+        </main>
       </div>
     </Router>
-  )
+  );
 }
 
-export default App
+export default App;
