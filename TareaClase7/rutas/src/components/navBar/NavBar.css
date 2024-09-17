@@ -1,6 +1,6 @@
 .navbar {
     position: fixed;
-    top: 150px; 
+    top: 130px; 
     left: 0;
     right: 0;
     background-color: white;
@@ -27,6 +27,6 @@
 }
   
 .navbar a:hover {
-    text-decoration: underline; /* Subrayar el enlace al pasar el ratón */
+    text-decoration: underline; 
 }
   
