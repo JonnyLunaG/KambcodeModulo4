@@ -12,7 +12,7 @@ const CharacterPage = () => {
 
   useEffect(() => {
     const fetchPersonajes = async () => {
-      let url = `https://rickandmortyapi.com/api/character?page=${paginaActual}`;
+      let url = `https://rickandmortyapi.com/api/character/?page=${paginaActual}`;
 
       if(filtros.searchParam){
         url +=`&name=${filtros.searchParam}`;
@@ -47,7 +47,7 @@ const CharacterPage = () => {
 
   const handleSearch = (searchFilters) => {
     setFiltros(searchFilters);
-    setPaginaActual(1); 
+    setPaginaActual(0); 
   };
 
   return (
